@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh-so-ngay-trong-thang</title>
+</head>
+<body>
+<input type="number" id="month" placeholder="Nhập tháng...">
+<button onclick="countDay()">Số ngày trong tháng:</button>
+<div id="result"></div>
+<script>
+    let monthYear = document.getElementById('month');
+    function countDay() {
+        switch (parseInt(monthYear.value)) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("result").innerHTML = "31 ngày";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("result").innerHTML = "30 ngày";
+                break;
+            case 2:
+                document.getElementById("result").innerHTML = "28 ngày";
+                break;
+            default:
+                document.getElementById("result").innerHTML = "khong co thang phu hop";
+            break;
+        }
+    }
+
+</script>
+</body>
+</html>
